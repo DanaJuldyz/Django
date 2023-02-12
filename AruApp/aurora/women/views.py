@@ -9,3 +9,12 @@ def categories(request,catid):
 
 def not_found(request,exception):
     return HttpResponse("h1>404 Страница не найдена </h1>")
+
+def server_error(request,exception):
+    return HttpResponse("h1>500 Ошибка сервера </h1>")
+
+def Access_is_denied(request,exception):
+    return HttpResponse("h1>403 Доступ запрещен </h1>")
+
+def request_processing(request,exception):
+    return HttpResponse("h1>400 Невозможно обработать запрос </h1>")
